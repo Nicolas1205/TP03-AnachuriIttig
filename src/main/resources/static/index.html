@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <title> Home Page </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+
+    <header class="flex flex-col justify-center items-center m-4">
+      <h1 class="font-semibold text-4xl"> Home Page </h1>
+      <img class="w-1/2 h-80" src="https://imgs.xkcd.com/comics/real_programmers.png" alt="tokipona sticks meme"
+      title="Nothing useful at all" />
+    </header>
+
+
+    <nav class="flex flex-row justify-evenly border-2 border-y-black items-center flex-grow p-4 my-4">
+      <div>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/"> Inicio </a>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/productos"> Productos </a>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/consejos"> Consejos de Salud </a>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/servicios"> Servicios de Paseo </a>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/sucursales"> Sucursales </a>
+        <a class="m-2 p-2 hover:text-slate-600 border border-black rounded" href="/contacto"> Contactanos </a>
+      </div>
+    </nav>
+
+
+    <div class="flex flex-row border-black m-2">
+      <div class="border-black border-2 p-2 m-2 w-3/4 h-full">
+        <div class="flex flex-column justify-center items-center">
+          <section class="w-full">
+            <article class="m-2 p-2 border-black border-2">
+              <h4 class="text-bold"> Article 1 </h4>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </article>
+            <article class="m-2 p-2 border-black border-2">
+              <h4 class="text-bold"> Article 2 </h4>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </article>
+          </section>
+        </div>
+      </div>
+      <div class="border-black border-2 p-2 m-2 w-1/4">
+        <aside>
+          <h1> The World in brief </h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </aside>
+      </div>
+    </div>
+    <div class="border-y-black border-2 w-full p-8">
+      <footer>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </footer>
+    </div>
+  </body>
+
+</html>
