@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Servicios {
-
   @GetMapping("/servicios")
   public String getServicios(Model model) {
     return "servicios.html";
