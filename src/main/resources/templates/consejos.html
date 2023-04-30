@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <title> Consejos </title>
+    <meta charset="UTF-8"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-2 gap-4"> 
+      <div class="p-4 m-4 border-black border-2 round" th:each="consejo: ${consejos}">
+        <h4 th:text="${consejo.title}"/>
+        <p th:text="${consejo.description}"/>
+      </div>
+    </div>
+  </body>
+</html>
