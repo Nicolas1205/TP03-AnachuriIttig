@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <title> Productos </title>
+    <meta charset="UTF-8"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-2 gap-4"> 
+      <div class="p-4 m-4 border-black border-2 round" th:each="producto: ${productos}">
+        <h4 th:text="${producto.title}"/>
+        <p th:text="${producto.description}"/>
+        <img class="w-12 h-12" th:src="${producto.imgUrl}"/>
+      </div>
+    </div>
+  </body>
+</html>
