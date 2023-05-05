@@ -5,7 +5,7 @@ import ar.edu.unju.edm.tp3.model.Producto;
 import java.util.HashMap;
 
 public class Productos {
-    private static HashMap<Integer, Producto> productos;
+    private static HashMap<Integer, Producto> productos = new HashMap<>();
 
     public static HashMap<Integer, Producto> getProductos() {
         return productos;
