@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Optional;
 
 @Controller
 public class ProductoController {
@@ -15,8 +18,10 @@ public class ProductoController {
     IProductosService productosService;
 
     @GetMapping("/agregarProducto")
-    String mostrarFormulario(Model model) {
-        model.addAttribute("producto", new Producto());
+    String mostrarFormulario(@RequestParam("codigo") Optional<Integer> codigo, Model model) {
+        var producto = codigo.map(productosService::recuperarProducto).orElse(new Producto());
+
+        model.addAttribute("producto", producto);
         return "agregarProductos";
     }
 
