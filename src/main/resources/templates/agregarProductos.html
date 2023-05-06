@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <title> Producto Formulario </title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.0-alpha1/css/pico.min.css" />
+</head>
+
+<body>
+  <!-- Main -->
+  <main>
+    <div>
+      <form action="#" th:action="@{agregarProducto}" th:object="${producto}" method="post">
+        <label for="codigo"> Código </label>
+        <input th:field="*{codigo}" type="text" name="codigo" required>
+        <label for="nombre"> Nombre </label>
+        <input th:field="*{nombre}" type="text" name="nombre" required>
+        <label for="descripcion"> Descripción </label>
+        <textarea th:field="*{descripcion}" cols="30" rows="4" name="descripcion"></textarea>
+        <label for="precio"> Precio </label>
+        <input th:field="*{precio}" type="text" name="precio" required>
+        <label for="stock"> Stock </label>
+        <input th:field="*{stock}" type="text" name="stock" required>
+        <label for="marca"> Marca</label>
+        <input th:field="*{marca}" type="text" name="marca" required>
+        <input type="submit" value="Crear">
+      </form>
+    </div>
+    <main>
+</body>
+
+</html>
