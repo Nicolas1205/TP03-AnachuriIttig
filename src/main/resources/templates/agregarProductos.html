@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
 
 <head>
   <title> Producto Formulario </title>
@@ -9,25 +9,25 @@
 
 <body>
   <!-- Main -->
-  <main>
+  <main class="container">
     <div>
       <form action="#" th:action="@{agregarProducto}" th:object="${producto}" method="post">
         <label for="codigo"> Código </label>
-        <input th:field="*{codigo}" type="text" name="codigo" required>
+        <input th:field="*{codigo}" type="text" name="codigo" required inputmode="numeric" pattern="[0-9]*">
         <label for="nombre"> Nombre </label>
         <input th:field="*{nombre}" type="text" name="nombre" required>
         <label for="descripcion"> Descripción </label>
         <textarea th:field="*{descripcion}" cols="30" rows="4" name="descripcion"></textarea>
         <label for="precio"> Precio </label>
-        <input th:field="*{precio}" type="text" name="precio" required>
+        <input th:field="*{precio}" type="number" name="precio" required step="0.01" min="0">
         <label for="stock"> Stock </label>
-        <input th:field="*{stock}" type="text" name="stock" required>
+        <input th:field="*{stock}" type="number" name="stock" required step="1" min="0">
         <label for="marca"> Marca</label>
         <input th:field="*{marca}" type="text" name="marca" required>
         <input type="submit" value="Crear">
       </form>
     </div>
-    <main>
+  </main>
 </body>
 
 </html>
