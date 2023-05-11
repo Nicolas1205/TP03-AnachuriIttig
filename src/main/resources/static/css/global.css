@@ -23,10 +23,17 @@
     --pico-form-element-border-color: var(--pico-color);
     --pico-form-element-background-color: var(--pico-background-color);
     --pico-code-background-color: transparent;
+    --pico-card-background-color: var(--pico-background-color);
+    --pico-card-sectioning-background-color: var(--pico-background-color);
+    --pico-card-border-color: white;
 }
 
 nav {
     border: double 1px var(--pico-color);
     outline: double 1px var(--pico-color);
     outline-offset: -6px;
+}
+
+article {
+    border: 2px solid white;
 }
