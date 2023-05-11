@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Teletype Soluciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.0-alpha1/css/pico.min.css" />
+    <link rel="stylesheet" href="../static/css/global.css" th:href="@{/css/global.css}">
+    <link rel="stylesheet" href="../static/css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <main class="container">
+        <hgroup>
+            <h1>Catálogo de productos</h1>
+            <h6>만국의 노동자여, 단결하라!</h6>
+        </hgroup>
+        <pre><code>
+                    ..
+                  .oK0l
+                 :0KKKKd.
+               .xKO0KKKKd
+              ,Od' .d0000l
+             .c;.   .'''...           ..'.
+.,:cloddxxxkkkkOOOOkkkkkkkkxxxxxxxxxkkkx:
+;kOOOOOOOkxOkc'...',;;;;,,,'',;;:cllc:,.
+ .okkkkd,.lko  .......',;:cllc:;,,'''''.
+   .cdo. :xd' cd:.  ..';'',,,'',,;;;,'.
+      . .ddl.;doooc'..;oc;'..';::;,'.
+        coo;.oooolllllllcccc:'.  .
+       .ool''lllllccccccc:::::;.
+       ;lll. .':cccc:::::::;;;;'
+       :lcc:'',..';::::;;;;;;;,,.
+       :cccc::::;...';;;;;,,,,,,.
+       ,::::::;;;,'.  ..',,,,'''.
+        ........          ......
+        </code></pre>
+        <div role="group">
+            <a href="/agregarProducto"><button type="button">Ir a carga</button></a>
+            <a href="/productos"><button type="button" class="outline">Ver productos</button></a>
+        </div>
+    </main>
+</body>
+</html>
