@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.0-alpha1/css/pico.min.css" />
+    <link rel="stylesheet" href="../../static/css/global.css" th:href="@{/css/global.css}">
+</head>
+<body>
+    <nav th:fragment="navbar" class="container-fluid">
+        <ul>
+            <li>
+                <a href="../index.html" th:href="@{/}" class="contrast"><strong>Teletype soluciones</strong></a>
+            </li>
+            <li>
+                <a
+                    href="../productos.html"
+                    th:href="@{/productos}"
+                    class="secondary"
+                >
+                    Productos
+                </a>
+            </li>
+            <li>
+                <a
+                    href="../agregarProductos.html"
+                    th:href="@{/agregarProductos}"
+                    class="secondary"
+                >
+                    Carga
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
