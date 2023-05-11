@@ -32,10 +32,19 @@ public class ProductoController {
         return "redirect:/productos";
     }
 
+    @PostMapping("/deleteProducto")
+    String eliminarProducto(@RequestParam("codigo") int codigo) {
+        productosService.eliminarProducto(codigo);
+        return "redirect:/productos";
+    }
+
     @GetMapping("/productos")
-    String mostrarProductos(Model model) {
+    String mostrarProductos(@RequestParam("focus") Optional<Integer> codigo, Model model) {
         var lista = productosService.listarProductos();
         model.addAttribute("productos", lista);
+        var producto = codigo.map(productosService::recuperarProducto);
+        System.out.println(producto);
+        producto.ifPresent(value -> model.addAttribute("producto", value));
         return "productos";
     }
 }

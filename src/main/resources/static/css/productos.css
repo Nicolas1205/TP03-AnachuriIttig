@@ -20,8 +20,6 @@
 
 .items footer {
   display: grid;
-  padding: 4px;
-  margin: 2px;
 }
 
 .items footer button {
