@@ -4,31 +4,42 @@
 <head>
   <title> Producto Formulario </title>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../static/css/productos.css" th:href="@{/css/productos.css}"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.0-alpha1/css/pico.min.css" />
 </head>
+
+
 
 <body>
   <!-- MAIN -->
   <main class="container">
     <div>
-      <section th:each="producto: ${productos}">
-        <article>
+      <section class="grid items">
+        <article th:each="producto: ${productos}">
+          <header>
+            <hgroup>
+              <h3 th:text="${producto.nombre}" />
+              <p th:text="${producto.descripcion}" />
+            </hgroup>
+
+          </header>
           <div>
-            <p th:text="${producto.nombre}" />
-          </div>
-          <div>
-            <p th:text="${producto.descripcion}" />
-            <p th:text="${producto.precio}" />
-          </div>
-          <div>
-            <p th:text="${producto.stock}" />
+            <p class="price-container" th:text="'$ ' + ${producto.precio}" />
+            <p th:text="${producto.stock} + ' en stock'" />
             <p th:text="${producto.marca}" />
           </div>
+          <footer>
+            <div role="group">
+              <button><span class="material-symbols-outlined">info</span></button>
+              <button><span class="material-symbols-outlined">delete</span></button>
+              <button><span class="material-symbols-outlined">edit</span></button>
+          </footer>
         </article>
       </section>
+
     </div>
 
-    <div>
+    <div class="controls-container">
       <a role="button" href="/agregarProducto"> Volver a la carga </a>
       <a role="button" href="/"> Volver al Inicio </a>
     </div>
