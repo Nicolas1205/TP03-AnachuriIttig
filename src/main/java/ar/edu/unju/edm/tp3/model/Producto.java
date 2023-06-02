@@ -1,6 +1,13 @@
 package ar.edu.unju.edm.tp3.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Producto {
+		@Id
     int codigo;
     String nombre;
     String descripcion;

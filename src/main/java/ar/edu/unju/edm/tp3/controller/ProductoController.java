@@ -19,7 +19,8 @@ public class ProductoController {
 
     @GetMapping("/agregarProducto")
     String mostrarFormulario(@RequestParam("codigo") Optional<Integer> codigo, Model model) {
-        var producto = codigo.map(productosService::recuperarProducto).orElse(new Producto());
+        var producto = codigo.map(productosService::recuperarProducto).orElse(Optional.of(new Producto()));
+
 
         model.addAttribute("producto", producto);
         return "agregarProductos";
