@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public interface IProductosService {
@@ -16,5 +17,5 @@ public interface IProductosService {
 
     void vaciarProductos();
 
-    Collection<Producto> listarProductos();
+    List<Producto> listarProductos();
 }

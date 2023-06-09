@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.List;
 
 @Service
 public class ProductosService implements IProductosService {
@@ -37,7 +38,7 @@ public class ProductosService implements IProductosService {
     }
 
     @Override
-    public Collection<Producto> listarProductos() {
-				return productosRepository.findAll();
+    public List<Producto> listarProductos() {
+				return productosRepository.findAllActive();
     }
 }

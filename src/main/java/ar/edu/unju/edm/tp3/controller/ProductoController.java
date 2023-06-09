@@ -28,7 +28,7 @@ public class ProductoController {
 
     @PostMapping("/agregarProducto")
     String procesarFormulario(@ModelAttribute("producto") Producto producto) {
-        producto.setEstado(true);
+        //producto.setEstado(true);
         productosService.crearProducto(producto);
         return "redirect:/productos";
     }
@@ -44,7 +44,6 @@ public class ProductoController {
         var lista = productosService.listarProductos();
         model.addAttribute("productos", lista);
         var producto = codigo.map(productosService::recuperarProducto);
-        System.out.println(producto);
         producto.ifPresent(value -> model.addAttribute("producto", value));
         return "productos";
     }
